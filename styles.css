@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, rgba(107, 213, 193, 0.7098039216), rgba(81, 40, 194, 0.7098039216));
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.calculadora {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgb(70, 56, 115);
+  background-color: white;
+  /* dark theme*/
+}
+.calculadora #equal {
+  height: 130px;
+}
+.calculadora #display {
+  color: rgb(58, 57, 57);
+  margin: 0 10 px;
+  height: 120px;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.calculadora button#clear {
+  background-color: #ffd5d8;
+  color: red;
+}
+.calculadora .btn-number {
+  background-color: rgb(179, 223, 236);
+  color: black;
+}
+.calculadora .btn-operator {
+  background-color: rgb(192, 245, 192);
+}
+.calculadora .btn-equal {
+  background-color: rgb(192, 245, 192);
+}
+.calculadora.dark {
+  background-color: #1b1b1b;
+}
+.calculadora.dark #display {
+  color: #f8fafb;
+}
+.calculadora.dark #clear {
+  background-color: #4c35aa;
+  color: #f8fafb;
+}
+.calculadora.dark .btn-number {
+  background-color: #8efda6;
+  color: #1b1b1b;
+  font-weight: 600;
+}
+.calculadora.dark .btn-operator {
+  background-color: #f0db4f;
+  color: black;
+}
+.calculadora.dark .btn-equal {
+  background-color: #f23b00;
+  color: #ffffff;
+}
+.calculadora .theme-toggler {
+  background-color: #1b1b1b;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+.calculadora .theme-toggler::before {
+  position: absolute;
+  background-color: #1b1b1b;
+  content: "";
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+.calculadora .theme-toggler.active {
+  color: white;
+}
+.calculadora .theme-toggler.active::before {
+  background-color: #f8fafb;
+  content: "";
+}
+.calculadora button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.calculadora button:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=styles.css.map */
